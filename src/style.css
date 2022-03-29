@@ -1,0 +1,61 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 313px auto;
+  grid-template-areas:
+    "header header header"
+    ". dis .";
+
+  height: 100%;
+  overflow: auto;
+}
+
+.header {
+  grid-area: header;
+  outline: solid 1px red;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 0.5fr;
+  grid-template-areas:
+    ". title title title . "
+    ". l1 l2 l3 . ";
+}
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
+.link-1 {
+  grid-area: l1;
+}
+.link-2 {
+  grid-area: l2;
+}
+.link-3 {
+  grid-area: l3;
+}
+
+.link-1,
+.link-2,
+.link-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+  font-size: 24px;
+}
+.display {
+  grid-area: dis;
+  outline: solid 1px blue;
+  margin-top: 50px;
+  font-size: 24px;
+}
