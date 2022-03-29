@@ -15,6 +15,7 @@ body {
 
   height: 100%;
   overflow: auto;
+  background: url(../src/boba.png);
 }
 
 .header {
@@ -33,6 +34,10 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 60px;
+  background: black;
+  opacity: 0.85;
+  color: white;
+  margin: 25px;
 }
 .link-1 {
   grid-area: l1;
@@ -52,10 +57,18 @@ body {
   justify-content: center;
   outline: 1px solid black;
   font-size: 24px;
+  color: white;
+  cursor: pointer;
+  background: black;
+  opacity: 0.6;
+  margin-right: 7px;
 }
 .display {
   grid-area: dis;
   outline: solid 1px blue;
   margin-top: 50px;
   font-size: 24px;
+  color: white;
+  opacity: 0.7;
+  background: black;
 }
