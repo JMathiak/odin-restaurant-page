@@ -3,7 +3,25 @@ const createLink = (num, text) => {
   let btn = document.createElement("div");
   btn.innerHTML = text;
   btn.classList.add("link-" + num);
+  btn.setAttribute("data-key", num);
   div.appendChild(btn);
+  let link = document.getElementsByClassName("link-" + num);
+  console.log(link);
+  if (num === 1) {
+    link[0].addEventListener("click", (e) => {
+      alert("home");
+    });
+  }
+  if (num === 2) {
+    link[0].addEventListener("click", (e) => {
+      alert("Menu");
+    });
+  }
+  if (num === 3) {
+    link[0].addEventListener("click", (e) => {
+      alert("Contact Us");
+    });
+  }
 };
 
 export default createLink;
