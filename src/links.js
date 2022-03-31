@@ -1,3 +1,5 @@
+import { renderHomePage, renderMenu, renderContact } from "./display";
+
 const createLink = (num, text) => {
   let div = document.querySelector(".header");
   let btn = document.createElement("div");
@@ -9,17 +11,17 @@ const createLink = (num, text) => {
   console.log(link);
   if (num === 1) {
     link[0].addEventListener("click", (e) => {
-      alert("home");
+      renderHomePage();
     });
   }
   if (num === 2) {
     link[0].addEventListener("click", (e) => {
-      alert("Menu");
+      renderMenu();
     });
   }
   if (num === 3) {
     link[0].addEventListener("click", (e) => {
-      alert("Contact Us");
+      renderContact();
     });
   }
 };
