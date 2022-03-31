@@ -20,7 +20,7 @@ body {
 
 .header {
   grid-area: header;
-  outline: solid 1px red;
+
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr 0.5fr;
@@ -60,15 +60,69 @@ body {
   color: white;
   cursor: pointer;
   background: black;
-  opacity: 0.6;
+  opacity: 0.85;
   margin-right: 7px;
 }
 .display {
   grid-area: dis;
-  outline: solid 1px blue;
   margin-top: 50px;
   font-size: 24px;
   color: white;
-  opacity: 0.7;
+  opacity: 0.85;
   background: black;
+  margin-bottom: 50px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 1000px;
+  grid-template-areas:
+    "m1 m2"
+    "m3 m4"
+    "m5 m6";
+}
+
+.menu > div {
+  display: grid;
+  grid-template-rows: 1fr 1f;
+  grid-template-columns: 0.75fr 1.4fr;
+  grid-template-areas:
+    "img name"
+    "img desc";
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  padding-right: 30px;
+}
+
+.menu-1 {
+  grid-area: m1;
+}
+
+.item-name {
+  grid-area: name;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-size: 36px;
+}
+
+.item-desc {
+  grid-area: desc;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.item-pic {
+  height: 50%;
+  width: 50%;
+  opacity: 1;
+}
+
+.pic-holder {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
