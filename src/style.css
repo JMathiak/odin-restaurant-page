@@ -1,9 +1,19 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./FuzzyBubbles-Regular.ttf') format('FuzzyBubbles'), url('./BubblegumSans-Regular.ttf') format('BubblegumSans');
+  font-weight: 600;
+  font-style: normal;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Bubblegum Sans', cursive;
 }
+
+
 
 #content {
   display: grid;
@@ -20,7 +30,7 @@ body {
 
 .header {
   grid-area: header;
-
+  
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr 0.5fr;
@@ -38,6 +48,7 @@ body {
   opacity: 0.85;
   color: white;
   margin: 25px;
+  font-family: 'Bubblegum Sans', cursive;
 }
 .link-1 {
   grid-area: l1;
@@ -68,9 +79,10 @@ body {
   margin-top: 50px;
   font-size: 24px;
   color: white;
-  opacity: 0.85;
-  background: black;
+  background: rgba(0,0,0, .9);
   margin-bottom: 50px;
+  height: 500px;
+  
 }
 
 .menu {
@@ -82,6 +94,8 @@ body {
     "m1 m2"
     "m3 m4"
     "m5 m6";
+    
+    
 }
 
 .menu > div {
@@ -125,4 +139,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.home-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addr-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+}
+
+.display > div:nth-last-child(2){
+  margin-bottom: 50px;
 }

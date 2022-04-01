@@ -1,20 +1,30 @@
 import gcmilktea from "./gcmilktea.png";
+import location from "./location.png";
 const initialRender = () => {
   let newDiv = document.createElement("div");
-  newDiv.innerHTML = "This is the Home Page";
+
   newDiv.className = "display";
   let wholePage = document.querySelector("#content");
   wholePage.appendChild(newDiv);
+  let homeInfo = document.createElement("div");
+  homeInfo.innerHTML =
+    "Serving Bomb Boba Since 2022. <br></br> Order Online or Come Visit Us!";
+  newDiv.appendChild(homeInfo);
+  homeInfo.className = "home-text";
 };
 
 const renderHomePage = () => {
   let disDiv = document.querySelector(".display");
   disDiv.remove();
   let newDiv = document.createElement("div");
-  newDiv.innerHTML = "This is the Home Page";
   newDiv.className = "display";
   let wholePage = document.querySelector("#content");
   wholePage.appendChild(newDiv);
+  let homeInfo = document.createElement("div");
+  homeInfo.innerHTML =
+    "Serving Bomb Boba Since 2022. <br></br> Order Online or Come Visit Us!";
+  newDiv.appendChild(homeInfo);
+  homeInfo.className = "home-text";
 };
 
 const renderMenu = () => {
@@ -24,6 +34,7 @@ const renderMenu = () => {
   newDiv.className = "display";
   let wholePage = document.querySelector("#content");
   wholePage.appendChild(newDiv);
+  document.querySelector(".display").style.height = "1000px";
   let menuDiv = document.createElement("div");
   menuDiv.className = "menu";
   newDiv.appendChild(menuDiv);
@@ -79,9 +90,24 @@ const renderContact = () => {
   let disDiv = document.querySelector(".display");
   disDiv.remove();
   let newDiv = document.createElement("div");
-  newDiv.innerHTML = "This is the Contact Information Page";
   newDiv.className = "display";
   let wholePage = document.querySelector("#content");
   wholePage.appendChild(newDiv);
+  document.querySelector(".display").style.height = "750px";
+  let addrDiv = document.createElement("div");
+  addrDiv.innerHTML = "Address: 9370 Warren Parkway, Frisco, TX 75035";
+  addrDiv.className = "addr-info";
+  newDiv.appendChild(addrDiv);
+  let pnoDiv = document.createElement("div");
+  pnoDiv.innerHTML = "Phone Number: 214-214-2140";
+  pnoDiv.className = "addr-info";
+  newDiv.appendChild(pnoDiv);
+  let locationHolder = document.createElement("div");
+  locationHolder.className = "pic-holder";
+  const locImg = new Image();
+  locImg.src = location;
+  locImg.className = "location-image";
+  locationHolder.appendChild(locImg);
+  newDiv.appendChild(locationHolder);
 };
 export { initialRender, renderHomePage, renderMenu, renderContact };

@@ -1,7 +1,7 @@
 const createTitle = () => {
   let div = document.querySelector(".header");
   let title = document.createElement("div");
-  title.innerHTML = "Boba Shop";
+  title.innerHTML = "BOMB BOBA";
   title.className = "title";
   div.appendChild(title);
 };
